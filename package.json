@@ -18,7 +18,7 @@
   },
   "homepage": "https://github.com/johntango/pacmandata#readme",
   "dependencies": {
-    "body-parser": "^1.19.0",
+    "body-parser": "^1.20.2",
     "cors": "^2.8.5",
     "express": "^4.17.2",
     "node": "^17.4.0",
