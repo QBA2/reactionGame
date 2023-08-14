@@ -1,9 +1,8 @@
 const express = require('express');
+const app = express();
 
-let app = express();
-
-app.use(bodyParser.json()); // support json encoded bodies
-app.use(bodyParser.urlencoded({ extended: true }));
+// Use built-in middleware to handle JSON-encoded bodies
+app.use(express.json());
 
 let data = [99999];
 let fastest = 9999;
