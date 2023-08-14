@@ -13,7 +13,7 @@ app.get('/', (req, res) => {
     res.sendFile('block.html', { 'root': root });
 });
 app.get('/set', function(req, res) {
-    x = parseInt(req.query.x)
+    x = Number(req.query.x)
     data.push(x);
     fastest = Math.min(...data);
     console.log("fastest:" + fastest);
