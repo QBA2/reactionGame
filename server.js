@@ -1,8 +1,7 @@
 const express = require('express');
-let express = require('express');
-let bodyParser = require('body-parser');
-let path = require('path');
+
 let app = express();
+
 app.use(bodyParser.json()); // support json encoded bodies
 app.use(bodyParser.urlencoded({ extended: true }));
 
