@@ -2,8 +2,6 @@ const bodyParser = require('body-parser');
 const express = require();
 const app = express();
 
-let app = express(); 
-
 // Use body-parser middleware
 app.use(bodyParser.json()); // Parse JSON-encoded bodies
 app.use(bodyParser.urlencoded({ extended: true })); // Parse URL-encoded bodies
