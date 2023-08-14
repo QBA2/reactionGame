@@ -1,11 +1,9 @@
-const bodyParser = require('body-parser');
-const express = require();
-const app = express();
+const express = require('express');
 
-// Use body-parser middleware
-app.use(bodyParser.json()); // Parse JSON-encoded bodies
-app.use(bodyParser.urlencoded({ extended: true })); // Parse URL-encoded bodies
+let app = express();
 
+app.use(bodyParser.json()); // support json encoded bodies
+app.use(bodyParser.urlencoded({ extended: true }));
 
 let data = [99999];
 let fastest = 9999;
@@ -14,6 +12,7 @@ app.get('/', (req, res) => {
     res.sendFile('block.html', { 'root': root });
 });
 app.get('/set', function(req, res) {
+    const id = req.query.id;
     x = Number(req.query.x)
     data.push(x);
     fastest = Math.min(...data);
@@ -25,6 +24,7 @@ app.get('/get', function(req, res) {
     res.send(JSON.stringify(data));
 });
 app.get('/fastest',function(req,res){
+    const id = req.query.id;
     res.json(fastest)
 })
 
