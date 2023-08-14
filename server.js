@@ -1,9 +1,13 @@
-const express = require('express');
+const bodyParser = require('body-parser');
+const express = require();
+const app = express();
 
-let app = express();
+let app = express(); 
 
-app.use(bodyParser.json()); // support json encoded bodies
-app.use(bodyParser.urlencoded({ extended: true }));
+// Use body-parser middleware
+app.use(bodyParser.json()); // Parse JSON-encoded bodies
+app.use(bodyParser.urlencoded({ extended: true })); // Parse URL-encoded bodies
+
 
 let data = [99999];
 let fastest = 9999;
